@@ -4,6 +4,7 @@ A collection of Chef recipes to perform various functions of system administrati
 
 ## Table of recipes
 #### - setup.rb
+#### - server.rb
 
 
 ## Tools and technologies used
@@ -33,3 +34,6 @@ A collection of Chef recipes to perform various functions of system administrati
 ## Recipes
 ### setup.rb
 A simple recipe that installs 'tree' and 'ntp', enables ntp, and sets an MOTD banner.
+
+### server.rb
+A simple recipe that sets up a web server and creates a test page.
