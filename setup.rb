@@ -7,7 +7,9 @@ package 'ntp' do
 end
 
 file '/etc/motd' do
-    content 'This server is the property of Ryan Spishock.'
+    content 'ALERT! You are entering into a secured area! Your IP, Login Time, Username has been noted and has been sent to the server administrator!
+    This service is restricted to authorized users only. All activities on this system are logged.
+    Unauthorized access will be fully investigated and reported to the appropriate law enforcement agencies.'
     action :create
     owner 'root'
     group 'root'
