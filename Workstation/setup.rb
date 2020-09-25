@@ -24,3 +24,15 @@ end
 service 'ntpd' do
     action [ :enable, :start ]
 end
+
+user 'ryan' do
+    comment 'User account for Ryan'
+    uid 'ryan'
+    home '/home/ryan'
+    shell '/bin/bash'
+end
+
+group 'admins' do
+    members 'ryan'
+    append true
+end
