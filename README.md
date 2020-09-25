@@ -32,6 +32,9 @@ A collection of Chef recipes to perform various functions of system administrati
 
 
 ## Recipes
+### default.rb
+A default recipe created by Chef.  This recipe is used to call the associated recipe.
+
 ### setup.rb
 A simple recipe that installs 'tree' and 'ntp', enables ntp, and sets an MOTD banner.
 
