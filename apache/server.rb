@@ -2,10 +2,9 @@ pacakge 'httpd' do
     action :install
 end
 
-file 'var/www/html/index.html' do
-    content "<h1>Hellow World!</h1>
-            <h3>HOSTNAME: #{ node['hostname'] }</h3>
-            <h3>IPADDRESS: #{ node['ipaddress'] }</h3>"
+template '/var/www/html/index.html' do
+    content 'index.html.erb'
+
     action :create
 end
 
