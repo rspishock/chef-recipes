@@ -1,4 +1,4 @@
-pacakge 'httpd' do
+package 'httpd' do
     action :install
 end
 
