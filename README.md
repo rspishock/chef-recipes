@@ -5,6 +5,7 @@ A collection of Chef recipes to perform various functions of system administrati
 ## Table of recipes
 #### - setup.rb
 #### - server.rb
+#### - Vagrantfile
 
 
 ## Tools and technologies used
@@ -40,3 +41,7 @@ A simple recipe that installs 'tree' and 'ntp', enables ntp, and sets an MOTD ba
 
 ### server.rb
 A simple recipe that sets up a web server and creates a test page.
+
+## Other
+### Vagrantfile
+A vagrant file used to create and setup three CentOS 7.2 VMs, 2 web servers and 1 load balance.
