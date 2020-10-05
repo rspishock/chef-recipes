@@ -13,9 +13,19 @@ end
 
 haproxy_backend 'servers' do
   server [
-    'server1 127.0.0.1:8000 maxconn 32', 
-    'server2 127.0.0.1:8000 maxconn 32'
+    'web1 192.168.10.43:80 maxconn 32', 
+    'web2 192.168.10.44:80 maxconn 32'
   ]
-end
 
-haproxy_service 'haproxy'
+  haproxy_backend 'servers' do
+    server [
+      'web1 192.168.10.43:80 maxconn 32',
+      # 'web2 192.168.10.44:80 maxconn 32'
+    ]
+    # notifies :reload, 'haproxy_service[haproxy]' :immediately
+    # https://github.com/sous-chef/haproxy/issues/274
+  end
+  
+  haproxy_service 'haproxy' do 
+    subscribes :reload, 'template[/etc/haproxy/haproxy.cfg]', :immediately
+  end
